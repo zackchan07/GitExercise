@@ -1,0 +1,29 @@
+<mvc:View controllerName="day5exercise2chan.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Shell id="shell">
+	<App id="app">
+		<pages>
+			<Page id="page" title="{i18n>title}" class="sapUiResponsiveContentPadding">
+                    <content>
+                        <VBox id="idVBox">
+                            <Label id="idInput1Label" text="{i18n>Value1}" labelFor="idInput1"/>
+                            <Input id="idInput1" width="20%" type="Number" value="0" change="onChange" placeholder="{i18n>InputPlaceholder}" valueStateText="{i18n>ValueStateText}"/>
+                            <Label id="idInput2Label" text="{i18n>Value2}" labelFor="idInput1"/>
+                            <Input id="idInput2" width="20%" type="Number" value="0" change="onChange" placeholder="{i18n>InputPlaceholder}" valueStateText="{i18n>ValueStateText}"/>
+                            <Label id="idOperationLabel" text="{i18n>operation}" />
+                            <Input id="idOperation" editable="false" value="{i18n>addition}" width="20%" placeholder="{i18n>InputPlaceholder}"  valueStateText="{i18n>ValueStateText}"/>
+                            <Button id="idOperationButton" text="{i18n>changeOperation}" press="onOperationPress"/>
+                        </VBox>
+                    </content>
+                    <footer>
+                        <Toolbar id="idFooterToolbar">
+                            <ToolbarSpacer id="idFooterToolbarSpacer"/>
+                            <Button id="idCalculateButton" text="{i18n>calculate}" press="onCalculatePress"/>
+                        </Toolbar>
+                    </footer>
+			    </Page>		</pages>
+	</App>
+</Shell>
+
+</mvc:View>
